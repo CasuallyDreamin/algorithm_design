@@ -1,14 +1,14 @@
-# 💻 ALGORITHM DESIGN & IMPLEMENTATION
+# ALGORITHM DESIGN & IMPLEMENTATION
 
 This repository is a curated collection of fundamental **Data Structures** and **Algorithm Implementations**, focusing on efficient solutions for common algorithmic design problems. All implementations are written in Python and rigorously tested.
 
-## 🧭 Repository Contents
+## Repository Contents
 
 The algorithms and data structures are organized by topic for easy navigation.
 
 ---
 
-### 🌳 Data Structures (`data_structures/`)
+### Data Structures (`data_structures/`)
 
 This directory is divided into **Core**, **Graphs**, **Specialized**, and **Trees**.
 
@@ -44,7 +44,7 @@ This folder contains the foundational, universal structures.
 
 ---
 
-### ⚙️ Algorithms (`algorithms/`)
+### Algorithms (`algorithms/`)
 
 | Directory | Focus | Status |
 | :--- | :--- | :--- |
@@ -55,7 +55,7 @@ This folder contains the foundational, universal structures.
 
 ---
 
-### ✅ Testing (`tests/`)
+### Testing (`tests/`)
 
 | File | Validates | Status |
 | :--- | :--- | :--- |
@@ -68,7 +68,7 @@ This folder contains the foundational, universal structures.
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 To explore and run the algorithms, follow these simple setup steps.
 
@@ -80,7 +80,7 @@ You will need **Python 3.x** installed on your system.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/CasuallyDreamin/algorithm_design.git](https://github.com/CasuallyDreamin/algorithm_design.git)
+    git clone https://github.com/CasuallyDreamin/algorithm_design.git
     cd algorithm-design
     ```
 
@@ -95,7 +95,7 @@ You will need **Python 3.x** installed on your system.
     pip install -r requirements.txt
     ```
 
-## ✅ Running Tests
+## Running Tests
 
 You can verify the correctness of any implemented data structure using the unit tests located in the `tests/` directory. We use `pytest` for testing.
 
