@@ -1,0 +1,61 @@
+### Python ###
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+dist/
+wheels/
+*.egg-info/
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-file.txt
+
+# Unit test / coverage
+.coverage
+.tox/
+.pytest_cache/
+htmlcov/
+
+### OS and Editor Artifacts ###
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+ehthumbs.db
+
+# Visual Studio Code
+.vscode/
+
+# PyCharm / IntelliJ IDEA
+.idea/
+
+### Python Virtual Environment ###
+# Virtual environment files
+venv/
+env/
+/bin/
+/include/
+/lib/
+/lib64/
+
+### Jupyter Notebooks and Data Files ###
+# Checkpoint files created by Jupyter
+.ipynb_checkpoints
+
+# Temporary/large data files from algorithm runs or tests
+# Adjust these patterns based on your specific use case.
+# E.g., if you output results to 'output.txt', add that line.
+*.tmp
+*.log
+data_cache/
+results/
