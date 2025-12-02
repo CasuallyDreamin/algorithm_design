@@ -1,4 +1,5 @@
 from .array import DynamicArray
+from .hash_table import HashTable
 
 class MaxHeap:
     def __init__(self):
@@ -122,11 +123,9 @@ class MinHeap:
             right_index = self._get_right_child_index(index)
             smallest = index
 
-            # Check if left child exists and is smaller
             if left_index <= last_index and self._items[left_index] < self._items[smallest]:
                 smallest = left_index
 
-            # Check if right child exists and is smaller than the current smallest
             if right_index <= last_index and self._items[right_index] < self._items[smallest]:
                 smallest = right_index
 
@@ -159,3 +158,49 @@ class MinHeap:
         if self.is_empty():
             raise IndexError("Cannot peek_min from an empty heap.")
         return self._items[0]
+    
+class OptimizedMaxHeap:
+
+    def __init__(self):
+        self._heap = MaxHeap()
+        self._deleted = HashTable() 
+
+    def is_empty(self) -> bool:
+        self._cleanup()
+        return len(self._heap) == 0
+
+    def insert(self, height):
+        if self._deleted.contains(height) and self._deleted[height] > 0:
+            self._deleted[height] -= 1
+        else:
+            self._heap.insert(height)
+
+    def delete(self, height):
+        count = self._deleted.get(height) if self._deleted.contains(height) else 0
+        self._deleted.put(height, count + 1)
+        
+    def peek_max(self):
+
+        self._cleanup()
+        if self._heap.is_empty():
+            return 0
+        return self._heap.peek_max()
+
+    def extract_max(self):
+        self._cleanup()
+        if self._heap.is_empty():
+            raise IndexError("Cannot extract_max from an empty heap.")
+        
+        return self._heap.extract_max()
+
+    def _cleanup(self):
+        while not self._heap.is_empty():
+            top_height = self._heap.peek_max()
+
+            deleted_count = self._deleted.get(top_height) if self._deleted.contains(top_height) else 0
+
+            if deleted_count > 0:
+                self._heap.extract_max()
+                self._deleted[top_height] -= 1
+            else:
+                break
